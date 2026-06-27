@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="nl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaziantep Altınşiş Kebapcısı Eindhoven | Authentieke Turkse Kebap</title>
+    <meta name="description" content="Authentieke Gaziantep kebap van de houtskoolgrill aan de Kruisstraat in Eindhoven. Bestel online, haal af of kom eten bij Altınşiş.">
+    <meta name="keywords" content="Turks restaurant Eindhoven, kebab Eindhoven, Gaziantep kebap, Altınşiş Eindhoven, Adana kebab Eindhoven, halal Turks eten Eindhoven, restaurant Kruisstraat Eindhoven">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair_Display:wght@600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #09090b;
+            color: #fafafa;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #09090b; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #27272a; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #d97706; 
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "Gaziantep Altınşiş Kebapcısı",
+      "image": "https://images.unsplash.com/photo-1603360946369-dc9bb6258143?auto=format&fit=crop&w=1200&q=80",
+      "url": "https://www.altinsis.nl/",
+      "telephone": "+31402989886",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kruisstraat 62",
+        "addressLocality": "Eindhoven",
+        "postalCode": "5612 CJ",
+        "addressCountry": "NL"
+      },
+      "servesCuisine": "Turkish",
+      "priceRange": "€20-€30",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.1",
+        "reviewCount": "757"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Wednesday", "Thursday"],
+          "opens": "14:00",
+          "closes": "23:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Friday", "Saturday", "Sunday"],
+          "opens": "12:00",
+          "closes": "23:59"
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="font-sans antialiased pb-20 md:pb-0">
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-6 bg-transparent">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="text-2xl font-serif font-bold tracking-wider text-amber-500">
+                ALTINŞİŞ<span class="text-white text-xs block font-sans tracking-normal font-light">Gaziantep Kebapcısı</span>
+            </div>
+            
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-zinc-300">
+                <a href="#specialiteiten" class="hover:text-amber-500 transition-colors">Specialiteiten</a>
+                <a href="#menu" class="hover:text-amber-500 transition-colors">Menukaart</a>
+                <a href="#verhaal" class="hover:text-amber-500 transition-colors">Ons Verhaal</a>
+                <a href="#contact" class="hover:text-amber-500 transition-colors">Locatie</a>
+            </div>
+            
+            <div class="hidden md:flex gap-4">
+                <a href="tel:0402989886" class="flex items-center gap-2 px-5 py-2.5 rounded-full border border-white/10 text-sm font-medium hover:border-amber-500 hover:text-amber-500 transition-all">
+                    Bel Nu
+                </a>
+                <a href="#contact" class="flex items-center gap-2 px-6 py-2.5 rounded-full bg-amber-600 hover:bg-amber-500 text-zinc-950 font-semibold text-sm transition-all shadow-[0_0_15px_rgba(217,119,6,0.3)]">
+                    Bestel Online
+                </a>
+            </div>
+
+            <button id="menu-btn" class="md:hidden text-white focus:outline-none" aria-label="Menu openen">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobile-menu" class="fixed inset-0 z-40 bg-zinc-950 hidden flex-col items-center justify-center gap-8 text-xl font-serif">
+        <button id="close-btn" class="absolute top-6 right-6 text-white">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        <a href="#specialiteiten" class="hover:text-amber-500">Specialiteiten</a>
+        <a href="#menu" class="hover:text-amber-500">Menukaart</a>
+        <a href="#verhaal" class="hover:text-amber-500">Ons Verhaal</a>
+        <a href="#contact" class="hover:text-amber-500">Locatie & Contact</a>
+        <a href="#contact" class="px-8 py-3 bg-amber-600 text-zinc-950 rounded-full font-sans font-bold text-base">Bestel Online</a>
+    </div>
+
+
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1603360946369-dc9bb6258143?auto=format&fit=crop&w=1920&q=80')] bg-cover bg-center"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-zinc-950/50 via-zinc-950/80 to-zinc-950"></div>
+        
+        <div class="relative z-10 text-center max-w-4xl px-6 flex flex-col items-center mt-12">
+            <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-6 text-xs md:text-sm text-amber-500 font-medium tracking-wide">
+                🔥 AUTHENTIEKE GAZIANTEP CUISINE
+            </div>
+            <h1 class="text-4xl md:text-7xl font-serif font-bold leading-tight mb-6 text-white tracking-tight">
+                Echte Gaziantep kebap.<br><span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-500">Recht van het houtskoolvuur.</span>
+            </h1>
+            <p class="text-base md:text-xl text-zinc-300 mb-10 max-w-2xl font-light leading-relaxed">
+                Verse spiesen, ambachtelijk lavash brood, smaakvolle bulgur en sissende geroosterde groenten — bereid volgens familierecept in het hart van Eindhoven.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <a href="#contact" class="px-8 py-4 bg-amber-600 hover:bg-amber-500 text-zinc-950 font-bold rounded-full transition-all text-base flex items-center justify-center gap-2 shadow-xl shadow-amber-600/20">
+                    Bestel Online
+                </a>
+                <a href="https://maps.google.com/?q=Kruisstraat+62,+5612+CJ+Eindhoven" target="_blank" rel="noopener" class="px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-full transition-all text-base flex items-center justify-center gap-2 backdrop-blur-sm">
+                    Route naar Kruisstraat
+                </a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-8 left-4 right-4 md:left-1/2 md:-translate-x-1/2 md:w-max bg-zinc-900/90 backdrop-blur-xl border border-white/10 rounded-2xl p-4 flex flex-wrap md:flex-nowrap justify-center gap-6 md:gap-10 shadow-2xl">
+            <div class="flex items-center gap-2">
+                <span class="text-amber-500 text-lg">★</span>
+                <span class="font-bold text-white">4.1 Goud</span>
+                <span class="text-zinc-400 text-xs">(757+ reviews)*</span>
+            </div>
+            <div class="hidden md:block w-px h-6 bg-white/10"></div>
+            <div class="flex items-center gap-2 text-sm text-zinc-200">
+                <span class="text-amber-500">✔</span> Afhalen & Bezorgen
+            </div>
+            <div class="hidden md:block w-px h-6 bg-white/10"></div>
+            <div class="flex items-center gap-2 text-sm text-zinc-200">
+                <span class="text-amber-500">🍽</span> €20–30 p.p. Indicatie
+            </div>
+        </div>
+    </section>
+
+
+    <section id="verhaal" class="py-24 px-6 max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
+        <div>
+            <h2 class="text-3xl md:text-5xl font-serif font-bold mb-6 text-white leading-tight">Je ruikt het pure houtskoolvuur al op de Kruisstraat.</h2>
+            <p class="text-zinc-400 text-base md:text-lg mb-6 leading-relaxed">
+                Geen haastwerk. Geen vlakke, machinale smaken. Bij Gaziantep Altınşiş draait alles om vuur, eeuwenoud vakmanschap en vers halal vlees dat met uiterste precisie op de grill wordt bereid.
+            </p>
+            <p class="text-zinc-400 text-base mb-8 leading-relaxed">
+                Gaziantep is wereldwijd erkend als dé culinaire hoofdstad van de grill en specerijen. Die diepe, rokerige en sappige traditie brengen wij dagelijks tot leven in Eindhoven.
+            </p>
+            <div class="grid grid-cols-2 gap-4 text-sm text-zinc-300">
+                <div class="flex items-center gap-2">
+                    <span class="text-amber-500">🔥</span> Traditionele Grill
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-amber-500">🥩</span> 100% Vers Vlees
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-amber-500">🥖</span> Huisgemaakt Lavash
+                </div>
+                <div class="flex items-center gap-2">
+                    <span class="text-amber-500">👨‍👩‍👧</span> Warme Hospitality
+                </div>
+            </div>
+        </div>
+        <div class="aspect-[4/5] rounded-3xl overflow-hidden relative shadow-2xl border border-white/5">
+            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=800&q=80')] bg-cover bg-center"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-zinc-950 via-transparent to-transparent"></div>
+        </div>
+    </section>
+
+
+    <section id="specialiteiten" class="py-24 px-6 bg-zinc-900/30 border-y border-white/5">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-5xl font-serif font-bold mb-4 text-white">Onze Meesterwerken</h2>
+                <p class="text-zinc-400 max-w-2xl mx-auto text-base md:text-lg">Vers van de open keuken direct op jouw bord. Authentieke smaken die smelten op de tong.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-zinc-950 border border-white/5 rounded-2xl overflow-hidden group hover:border-amber-500/30 transition-all duration-300">
+                    <div class="aspect-[4/3] bg-zinc-900 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1626700051175-6518c4793f4f?auto=format&fit=crop&w=600&q=80" alt="Altınşiş Mix" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                          <h3 class="text-lg font-bold font-serif text-white">Altınşiş Mix</h3>
+                        </div>
+                        <p class="text-zinc-400 text-xs md:text-sm mb-6 leading-relaxed">De ultieme proeverij van de grill. Een royale combinatie van malse Adana, Urfa, kip- en lamsspiesen.</p>
+                        <a href="#contact" class="w-full block text-center py-2 rounded-xl bg-white/5 hover:bg-amber-600 hover:text-zinc-950 transition-all font-medium text-sm border border-white/10 hover:border-amber-600">Bestel Nu</a>
+                    </div>
+                </div>
+
+                <div class="bg-zinc-950 border border-white/5 rounded-2xl overflow-hidden group hover:border-amber-500/30 transition-all duration-300">
+                    <div class="aspect-[4/3] bg-zinc-900 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1608897013039-887f21d8c804?auto=format&fit=crop&w=600&q=80" alt="Adana Kebap" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                          <h3 class="text-lg font-bold font-serif text-white">Adana Kebap</h3>
+                        </div>
+                        <p class="text-zinc-400 text-xs md:text-sm mb-6 leading-relaxed">Licht pittig, ambachtelijk met de hand gehakt lamsvlees aan de spies. Smaakvol gekruid met rode pepervlokken.</p>
+                        <a href="#contact" class="w-full block text-center py-2 rounded-xl bg-white/5 hover:bg-amber-600 hover:text-zinc-950 transition-all font-medium text-sm border border-white/10 hover:border-amber-600">Bestel Nu</a>
+                    </div>
+                </div>
+
+                <div class="bg-zinc-950 border border-white/5 rounded-2xl overflow-hidden group hover:border-amber-500/30 transition-all duration-300">
+                    <div class="aspect-[4/3] bg-zinc-900 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1619535860434-ba1d8fa12536?auto=format&fit=crop&w=600&q=80" alt="Beyti Sarma" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                          <h3 class="text-lg font-bold font-serif text-white">Beyti Sarma</h3>
+                        </div>
+                        <p class="text-zinc-400 text-xs md:text-sm mb-6 leading-relaxed">In lavash gerold lamsgehakt van de grill, overgoten met warme tomatensaus, romige knoflookyoghurt en echte boter.</p>
+                        <a href="#contact" class="w-full block text-center py-2 rounded-xl bg-white/5 hover:bg-amber-600 hover:text-zinc-950 transition-all font-medium text-sm border border-white/10 hover:border-amber-600">Bestel Nu</a>
+                    </div>
+                </div>
+
+                <div class="bg-zinc-950 border border-white/5 rounded-2xl overflow-hidden group hover:border-amber-500/30 transition-all duration-300">
+                    <div class="aspect-[4/3] bg-zinc-900 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=600&q=80" alt="Tavuk Şiş" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                          <h3 class="text-lg font-bold font-serif text-white">Tavuk Şiş</h3>
+                        </div>
+                        <p class="text-zinc-400 text-xs md:text-sm mb-6 leading-relaxed">Malse, urenlang in traditionele Turkse yoghurtmarinade rustende blokjes kipfilet. Perfect sappig gegrild.</p>
+                        <a href="#contact" class="w-full block text-center py-2 rounded-xl bg-white/5 hover:bg-amber-600 hover:text-zinc-950 transition-all font-medium text-sm border border-white/10 hover:border-amber-600">Bestel Nu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="menu" class="py-24 px-6 max-w-5xl mx-auto">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl md:text-4xl font-serif font-bold mb-3 text-white">Een Blik op de Kaart</h2>
+            <p class="text-zinc-400 text-sm md:text-base">Wissel tussen de categorieën om onze populairste gerechten te bekijken.</p>
+        </div>
+
+        <div class="flex justify-center gap-2 border-b border-white/5 mb-8 overflow-x-auto pb-2">
+            <button onclick="switchTab('grill')" id="tab-grill" class="px-5 py-2.5 text-sm font-medium border-b-2 border-amber-500 text-amber-500 focus:outline-none transition-all">Houtskoolgrill</button>
+            <button onclick="switchTab('wraps')" id="tab-wraps" class="px-5 py-2.5 text-sm font-medium border-b-2 border-transparent text-zinc-400 hover:text-white focus:outline-none transition-all">Dürüms / Wraps</button>
+            <button onclick="switchTab('desserts')" id="tab-desserts" class="px-5 py-2.5 text-sm font-medium border-b-2 border-transparent text-zinc-400 hover:text-white focus:outline-none transition-all">Desserts</button>
+        </div>
+
+        <div id="content-grill" class="space-y-4">
+            <div class="flex justify-between items-center p-4 bg-white/5 border border-white/5 rounded-xl">
+                <div>
+                    <h4 class="font-bold text-white">Urfa Kebap</h4>
+                    <p class="text-xs md:text-sm text-zinc-400">Mild gekruid traditioneel lamsgehakt aan de spies.</p>
+                </div>
+            </div>
+            <div class="flex justify-between items-center p-4 bg-white/5 border border-white/5 rounded-xl">
+                <div>
+                    <h4 class="font-bold text-white">Kuzu Şiş</h4>
+                    <p class="text-xs md:text-sm text-zinc-400">Gemarineerde stukjes mals lamsvlees van de grill.</p>
+                </div>
+            </div>
+            <div class="flex justify-between items-center p-4 bg-white/5 border border-white/5 rounded-xl">
+                <div>
+                    <h4 class="font-bold text-white">Pirzola (Lamskoteletten)</h4>
+                    <p class="text-xs md:text-sm text-zinc-400">Perfect gecureerde, malse lamskoteletten met authentieke kruiden.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="content-wraps" class="space-y-4 hidden">
+            <div class="flex justify-between items-center p-4 bg-white/5 border border-white/5 rounded-xl">
+                <div>
+                    <h4 class="font-bold text-white">Adana Dürüm</h4>
+                    <p class="text-xs md:text-sm text-zinc-400">Adana kebab strak gerold in vers lavash brood met salade.</p>
+                </div>
+            </div>
+            <div class="flex justify-between items-center p-4 bg-white/5 border border-white/5 rounded-xl">
+                <div>
+                    <h4 class="font-bold text-white">Tavuk Dürüm</h4>
+                    <p class="text-xs md:text-sm text-zinc-400">Gegrilde kipspies in zacht lavash brood met frisse uien en peterselie.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="content-desserts" class="space-y-4 hidden">
+            <div class="flex justify-between items-center p-4 bg-white/5 border border-white/5 rounded-xl">
+                <div>
+                    <h4 class="font-bold text-white">Huisgemaakte Künefe</h4>
+                    <p class="text-xs md:text-sm text-zinc-400">Engelenhaar deeg met warme, gesmolten kaas, zoete siroop en pistache.</p>
+                </div>
+            </div>
+            <div class="flex justify-between items-center p-4 bg-white/5 border border-white/5 rounded-xl">
+                <div>
+                    <h4 class="font-bold text-white">Baklava Assortiment</h4>
+                    <p class="text-xs md:text-sm text-zinc-400">Flinterdun bladerdeeg gevuld met knapperige Antep pistachenoten.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="py-24 px-6 max-w-7xl mx-auto text-center border-t border-white/5">
+        <h2 class="text-3xl font-serif font-bold mb-12 text-white">Ervaringen uit Eindhoven</h2>
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="bg-white/5 border border-white/5 p-8 rounded-2xl text-left">
+                <div class="text-amber-500 mb-4">★★★★★</div>
+                <p class="text-zinc-300 italic mb-4">"Ongelofelijk malse Adana kebab. Je proeft direct dat het vlees vers is en op echt houtskool is bereid. De bediening is ontzettend gastvrij."</p>
+                <p class="text-xs text-zinc-500">— Gast Review</p>
+            </div>
+            <div class="bg-white/5 border border-white/5 p-8 rounded-2xl text-left">
+                <div class="text-amber-500 mb-4">★★★★★</div>
+                <p class="text-zinc-300 italic mb-4">"De open keuken en de geur van de grill nemen je direct mee naar Gaziantep. Royale porties en heerlijk vers lavash brood. Absoluut een aanrader."</p>
+                <p class="text-xs text-zinc-500">— Gast Review</p>
+            </div>
+            <div class="bg-white/5 border border-white/5 p-8 rounded-2xl text-left">
+                <div class="text-amber-500 mb-4">★★★★★</div>
+                <p class="text-zinc-300 italic mb-4">"Ideaal om met familie te eten. Grote schotels, authentieke smaken en perfecte locatie aan de Kruisstraat. Wij komen hier wekelijks."</p>
+                <p class="text-xs text-zinc-500">— Gast Review</p>
+            </div>
+        </div>
+        <p class="text-[10px] text-zinc-600 mt-8">*Disclaimers: Bovenstaande reviews weerspiegelen representatieve klantervaringen en dienen als voorbeeldteksten ter illustratie van de Google-rating.</p>
+    </section>
+
+
+    <section id="contact" class="py-24 px-6 bg-zinc-900/40 border-t border-white/5">
+        <div class="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12">
+            <div class="space-y-8">
+                <h2 class="text-4xl font-serif font-bold text-white">Locatie & Contact</h2>
+                
+                <div class="flex gap-4 items-start">
+                    <div class="p-3 bg-white/5 rounded-xl text-amber-500 text-xl">📍</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-1">Gaziantep Altınşiş Kebapcısı</h3>
+                        <a href="https://maps.google.com/?q=Kruisstraat+62,+5612+CJ+Eindhoven" target="_blank" rel="noopener" class="text-zinc-400 hover:text-amber-500 transition-colors">
+                            Kruisstraat 62<br>5612 CJ Eindhoven
+                        </a>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 items-start">
+                    <div class="p-3 bg-white/5 rounded-xl text-amber-500 text-xl">📞</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-1">Telefoonnummer</h3>
+                        <a href="tel:0402989886" class="text-zinc-400 hover:text-amber-500 transition-colors text-lg font-medium">040 298 9886</a>
+                    </div>
+                </div>
+
+                <div class="flex gap-4 items-start">
+                    <div class="p-3 bg-white/5 rounded-xl text-amber-500 text-xl">🕒</div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-2">Openingstijden</h3>
+                        <ul class="text-zinc-400 space-y-1 text-sm">
+                            <li class="flex justify-between w-56"><span class="text-white font-medium">Vandaag</span> <span class="text-amber-500">12:00 - 23:59</span></li>
+                            <li class="flex justify-between w-56"><span>Maandag</span> <span>14:00 - 23:00</span></li>
+                            <li class="flex justify-between w-56"><span>Dinsdag</span> <span class="text-zinc-600 font-medium">Gesloten</span></li>
+                            <li class="flex justify-between w-56"><span>Woensdag</span> <span>14:00 - 23:00</span></li>
+                            <li class="flex justify-between w-56"><span>Donderdag</span> <span>14:00 - 23:00</span></li>
+                            <li class="flex justify-between w-56"><span>Vrijdag - Zondag</span> <span>12:00 - 23:59</span></li>
+                        </ul>
+                        <p class="text-[10px] text-zinc-600 mt-3">*Controleer actuele tijden en feestdagen altijd vooraf via Google of telefonisch.</p>
+                    </div>
+                </div>
+
+                <div class="pt-4">
+                    <p class="text-xs text-zinc-400 mb-2">Direct online bestellen via uw favoriete platform of afhalen?</p>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="#" class="px-5 py-2.5 bg-zinc-800 hover:bg-zinc-700 text-white rounded-xl text-xs font-semibold border border-white/10 transition-all">Bestel via Thuisbezorgd</a>
+                        <a href="#" class="px-5 py-2.5 bg-zinc-800 hover:bg-zinc-700 text-white rounded-xl text-xs font-semibold border border-white/10 transition-all">Bestel via UberEats</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="bg-zinc-950 rounded-3xl overflow-hidden aspect-video lg:aspect-square relative flex items-center justify-center border border-white/5 group shadow-2xl">
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1519676867240-f03562e64548?auto=format&fit=crop&w=800&q=80')] bg-cover bg-center opacity-20 filter grayscale"></div>
+                <div class="relative z-10 text-center p-6 max-w-sm">
+                    <span class="text-4xl block mb-4">📍</span>
+                    <h4 class="text-xl font-serif font-bold text-white mb-2">Kruisstraat 62, Eindhoven</h4>
+                    <p class="text-xs text-zinc-400 mb-6">Gelegen in de levendige Kruisstraat, uitstekend bereikbaar voor zowel afhalen als gezellig dineren.</p>
+                    <a href="https://maps.google.com/?q=Kruisstraat+62,+5612+CJ+Eindhoven" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-6 py-3 bg-amber-600 text-zinc-950 rounded-full font-bold text-sm hover:bg-amber-500 transition-all">
+                        Navigatie Starten
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="border-t border-white/5 py-12 px-6 text-center text-zinc-500 text-xs">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="font-serif text-lg text-zinc-300 font-bold tracking-wider">ALTINŞİŞ EINDHOVEN</div>
+            <div class="flex gap-6 text-zinc-400">
+                <a href="#specialiteiten" class="hover:text-amber-500 transition-colors">Specialiteiten</a>
+                <a href="#menu" class="hover:text-amber-500 transition-colors">Menukaart</a>
+                <a href="#contact" class="hover:text-amber-500 transition-colors">Bestellen & Contact</a>
+            </div>
+            <div>&copy; <script>document.write(new Date().getFullYear())</script> Gaziantep Altınşiş Kebapcısı. Alle rechten voorbehouden.</div>
+        </div>
+    </footer>
+
+
+    <div class="md:hidden fixed bottom-0 left-0 right-0 bg-zinc-950/95 backdrop-blur-lg border-t border-white/10 p-4 z-50 flex gap-3">
+        <a href="tel:0402989886" class="flex-1 py-3.5 rounded-xl bg-zinc-900 text-white text-center font-semibold text-sm border border-white/10 active:bg-zinc-800 transition-all">
+            📞 Bel Nu
+        </a>
+        <a href="#contact" class="flex-[2] py-3.5 rounded-xl bg-amber-600 text-zinc-950 text-center font-bold text-sm shadow-lg active:bg-amber-500 transition-all">
+            🛍️ Online Bestellen
+        </a>
+    </div>
+
+
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.remove('bg-transparent', 'py-6');
+                navbar.classList.add('bg-zinc-950/90', 'backdrop-blur-md', 'border-b', 'border-white/5', 'py-4');
+            } else {
+                navbar.classList.remove('bg-zinc-950/90', 'backdrop-blur-md', 'border-b', 'border-white/5', 'py-4');
+                navbar.classList.add('bg-transparent', 'py-6');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const closeBtn = document.getElementById('close-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.classList.add('flex');
+        });
+
+        const closeMenu = () => {
+            mobileMenu.classList.remove('flex');
+            mobileMenu.classList.add('hidden');
+        };
+
+        closeBtn.addEventListener('click', closeMenu);
+        mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
+
+        // Interactive menu tabs
+        function switchTab(tabName) {
+            const tabs = ['grill', 'wraps', 'desserts'];
+            tabs.forEach(t => {
+                const button = document.getElementById(`tab-${t}`);
+                const content = document.getElementById(`content-${t}`);
+                if (t === tabName) {
+                    button.classList.add('border-amber-500', 'text-amber-500');
+                    button.classList.remove('border-transparent', 'text-zinc-400');
+                    content.classList.remove('hidden');
+                } else {
+                    button.classList.remove('border-amber-500', 'text-amber-500');
+                    button.classList.add('border-transparent', 'text-zinc-400');
+                    content.classList.add('hidden');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
